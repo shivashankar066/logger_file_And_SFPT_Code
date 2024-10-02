@@ -1,0 +1,24 @@
+DEB [20240827-11:10:36.288] thr=1   paramiko.transport: starting thread (client mode): 0x3e71a900
+DEB [20240827-11:10:36.288] thr=1   paramiko.transport: Local version/idstring: SSH-2.0-paramiko_3.4.1
+ERR [20240827-11:10:36.365] thr=1   paramiko.transport: Exception (client): Error reading SSH protocol banner[WinError 10054] An existing connection was forcibly closed by the remote host
+ERR [20240827-11:10:36.368] thr=1   paramiko.transport: Traceback (most recent call last):
+ERR [20240827-11:10:36.368] thr=1   paramiko.transport:   File "C:\Users\srampur\PycharmProjects\pythonProject1\venv\Lib\site-packages\paramiko\transport.py", line 2341, in _check_banner
+ERR [20240827-11:10:36.368] thr=1   paramiko.transport:     buf = self.packetizer.readline(timeout)
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:   File "C:\Users\srampur\PycharmProjects\pythonProject1\venv\Lib\site-packages\paramiko\packet.py", line 381, in readline
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:     buf += self._read_timeout(timeout)
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:   File "C:\Users\srampur\PycharmProjects\pythonProject1\venv\Lib\site-packages\paramiko\packet.py", line 616, in _read_timeout
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:     x = self.__socket.recv(128)
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:         ^^^^^^^^^^^^^^^^^^^^^^^
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport: ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport: 
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport: During handling of the above exception, another exception occurred:
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport: 
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport: Traceback (most recent call last):
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:   File "C:\Users\srampur\PycharmProjects\pythonProject1\venv\Lib\site-packages\paramiko\transport.py", line 2157, in run
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:     self._check_banner()
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:   File "C:\Users\srampur\PycharmProjects\pythonProject1\venv\Lib\site-packages\paramiko\transport.py", line 2345, in _check_banner
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport:     raise SSHException(
+ERR [20240827-11:10:36.371] thr=1   paramiko.transport: paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[WinError 10054] An existing connection was forcibly closed by the remote host
+ERR [20240827-11:10:36.372] thr=1   paramiko.transport: 
